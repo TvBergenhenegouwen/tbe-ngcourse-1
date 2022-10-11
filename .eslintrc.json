@@ -1,0 +1,123 @@
+{
+    "root": true,
+    "ignorePatterns": [
+        "projects/**/*"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "*.ts"
+            ],
+            "parserOptions": {
+                "project": [
+                    "tsconfig.json"
+                ],
+                "createDefaultProgram": true
+            },
+            "extends": [
+                "plugin:@angular-eslint/recommended"
+            ],
+            "rules": {
+                "@typescript-eslint/array-type": [
+                    "error",
+                    {
+                        "default": "array"
+                    }
+                ],
+                "@angular-eslint/directive-selector": [
+                    "error",
+                    {
+                        "type": "attribute",
+                        "prefix": "app",
+                        "style": "camelCase"
+                    }
+                ],
+                "@angular-eslint/component-selector": [
+                    "error",
+                    {
+                        "type": "element",
+                        "prefix": "app",
+                        "style": "kebab-case"
+                    }
+                ],
+                "@typescript-eslint/no-inferrable-types": [
+                    "off"
+                ],
+                "@typescript-eslint/no-shadow": [
+                    "error"
+                ],
+                "no-shadow": "off",
+                "arrow-parens": [
+                    "off",
+                    "always"
+                ],
+                "curly": [
+                    "error",
+                    "multi-or-nest",
+                    "consistent"
+                ],
+                "comma-dangle": [
+                    "warn",
+                    "always-multiline"
+                ],
+                "constructor-super": "error",
+                "max-len": [
+                    "off",
+                    {
+                        "code": 360,
+                        "ignorePattern": "^import|d=|path=|polygon|data:image|^export"
+                    }
+                ],
+                "max-lines": [
+                    "warn",
+                    500
+                ],
+                "no-extra-semi": "warn",
+                "no-fallthrough": "warn",
+                "no-irregular-whitespace": [
+                    "warn",
+                    {
+                        "skipStrings": false
+                    }
+                ],
+                "no-multiple-empty-lines": [
+                    "warn",
+                    {
+                        "max": 1
+                    }
+                ],
+                "no-underscore-dangle": [
+                    "warn",
+                    {
+                        "allowAfterThis": true
+                    }
+                ],
+                "no-var": "error",
+                "sort-imports": [
+                    "error",
+                    {
+                        "ignoreCase": false,
+                        "ignoreDeclarationSort": false,
+                        "ignoreMemberSort": false,
+                        "memberSyntaxSortOrder": [
+                            "none",
+                            "all",
+                            "single",
+                            "multiple"
+                        ],
+                        "allowSeparatedGroups": true
+                    }
+                ]
+            }
+        },
+        {
+            "files": [
+                "*.html"
+            ],
+            "extends": [
+                "plugin:@angular-eslint/template/recommended"
+            ],
+            "rules": {}
+        }
+    ]
+}
